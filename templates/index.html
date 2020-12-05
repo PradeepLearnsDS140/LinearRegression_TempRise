@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Temperature Rise - Climate Changes </h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="MEI" name="MEI" id="MEI" placeholder="MEI">
+            <input type="CO2" name="CO2" id="CO2" placeholder="CO2">
+            <input type="N2O" name="N2O" id="N2O" placeholder="N2O">
+            <input type="CFC11" name="CFC11" id="CFC11" placeholder="CFC11">
+            <input type="CFC12" name="CFC12" id="CFC12" placeholder="CFC12">
+            <input type="TSI" name="TSI" id="TSI" placeholder="TSI">
+            <input type="Aerosols" name="Aerosols" id="Aerosols" placeholder="Aerosols">
+</select>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
